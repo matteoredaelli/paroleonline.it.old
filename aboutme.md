@@ -5,7 +5,7 @@ subtitle: contatti
 ---
 
 Mi chiamo Matteo e sono un accanito sostenitore del 
-software libero. TRa i software opensource utilizati in questo sito cito:
+software libero. Tra i software opensource utilizzati in questo sito cito:
 
 - Angularjs
 - Jekyll
