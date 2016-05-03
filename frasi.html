@@ -1,0 +1,19 @@
+---
+layout: page
+title: Frasi
+subtitle: Frasi di esempio contenenti la parola che inserirai
+---
+
+<script src="/js/frasi.js"></script>
+
+	  <div ng-app="myApp" ng-controller="planetController">
+            <p><input ng-model="query" placeholder="inserisci una parola" type="text"></p>
+	    <p><button ng-click="searchV(query)">Cerca frasi</button></p>
+	    <p>Frasi trovate:</p>  
+                <ul>
+                  <li ng-repeat="doc in frasi">
+                        [[doc._source.text | limitTo: 500]]
+                  </li>
+                </ul>
+	  </div>
+
