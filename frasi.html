@@ -1,7 +1,11 @@
 ---
 layout: page
-title: Frasi
-subtitle: Frasi di esempio contenenti la parola che inserirai
+title: Frasi di esempio
+subtitle: Frasi italiane di esempio contenenti la parola che inserirai
+
+og_title: Frasi italiane di esempio
+og_description: frasi italiane e citazioni tratte da libri
+og_type: website
 ---
 
 <script src="/js/frasi.js"></script>
@@ -9,7 +13,7 @@ subtitle: Frasi di esempio contenenti la parola che inserirai
 	  <div ng-app="myApp" ng-controller="planetController">
             <p><input ng-model="query" placeholder="inserisci una parola" type="text"></p>
 	    <p><button ng-click="searchV(query)">Cerca frasi</button></p>
-	    <p>Frasi trovate:</p>  
+	    <p>Frasi di esempio trovate:</p>  
                 <ul>
                   <li ng-repeat="doc in frasi">
                         [[doc._source.text | limitTo: 500]]

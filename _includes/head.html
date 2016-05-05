@@ -7,11 +7,28 @@
 
   <meta name="author" content="{{ site.author.name }}" />
   
-  {% if page.subtitle %}
-  <meta name="description" content="{{ page.subtitle }}">
-  {% endif %}
 
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  {% if page.og_title %}
+    <!-- SEO -->
+    <meta name="description" content="{{ page.og_description }}">
+
+    <!-- meta facebook -->
+    <meta property="og:title" content="{{ page.og_title }}" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="{{ page.og_description }}" />
+    <meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:type" content="website" />
+
+    <!-- meta twitter -->
+    <meta name="twitter:card" content="{{ page.og_description }}" />
+    <meta name="twitter:site" content="@matteoredaelli" />
+    <meta name="twitter:title" content="{{ page.og_title }}" />
+    <meta name="twitter:description" content="{{ page.og_description }}" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="{{ page.url }}" />
+    {% endif %}
+    
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   
  <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
 

@@ -23,7 +23,6 @@ description: Parole, frasi, anagrammi e grammatica della lingua italiana!
 
 # List of links in the navigation bar
 navbar-links:
-  Anagramma: "anagramma"
   Frasi: "frasi"
   Sillabazione: "sillabazione"
   Vocabolario: "parola"

@@ -1,13 +1,17 @@
 ---
 layout: page
 title: Sillabazione
-subtitle: divisione in sillabe di una parola italiana
+subtitle: divisione in sillabe di parole italiane
+
+og_title: Sillabazione di parole italiane
+og_description: divisione in sillabe di una parola italiana
+og_type: website
 ---
 
 <script src="/js/sillabazione.js"></script>
 
-	  <div ng-app="myApp" ng-controller="planetController">
-            <p><input ng-model="query" placeholder="inserisci una parola" type="text"></p>
-	    <p><button ng-click="searchV(query)">Cerca parola</button></p>
-	  </div>
+<div ng-app="myApp" ng-controller="planetController">
+  <p><input ng-model="query" placeholder="inserisci una parola" type="text"></p>
+  <p><button ng-click="searchV(query)">Dividi in sillabe</button></p>
+</div>
 
