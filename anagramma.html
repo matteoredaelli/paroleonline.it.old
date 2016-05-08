@@ -10,14 +10,22 @@ og_type: website
 
 <script src="/js/anagramma.js"></script>
 
-	  <div ng-app="myApp" ng-controller="planetController">
-            <p><input ng-model="query" placeholder="inserisci una parola" type="text"></p>
-	    <p><button ng-click="searchV(query)">Cerca parola</button></p>
-	    <p>Risultato:</p>  
-                <ul>
-                  <li ng-repeat="doc in result">
-                        [[doc | limitTo: 500]]
-                  </li>
-                </ul>
-	  </div>
+<div ng-app="myApp" ng-controller="planetController">
+  <p><input ng-model="query" placeholder="inserisci una parola" type="text"></p>
+  <p><button ng-click="searchV(query)">Cerca parola</button></p>
+  
+  <div id="loader" class="ng-hide" ng-show="req.$$state.pending">
+    <p>Elaborazione in corso...</p>
+    <img class="ajax-loader"
+         src="http://fetchmywardrobe.com/app/webroot/img/loading-spinner11.gif" />
+  </div>
+  <div id="results" class="ng-hide" ng-hide="req.$$state.pending">
+    <p>Risultato:</p>  
+    <ul>
+      <li ng-repeat="doc in result">
+        [[doc | limitTo: 500]]
+      </li>
+    </ul>
+  </div>
+</div>
 

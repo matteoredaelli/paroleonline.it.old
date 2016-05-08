@@ -21,5 +21,5 @@ app.controller('planetController', function($scope, $http, $location) {
             ga('send', 'event', 'GrammaticaItaliana', 'sillabazione', query);
             $scope.sillabe = response.data;
          });
-     };
+    };
 });
