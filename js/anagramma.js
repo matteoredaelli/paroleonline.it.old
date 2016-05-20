@@ -1,6 +1,7 @@
 var app = angular.module('myApp', [], function($interpolateProvider) {
-  $interpolateProvider.startSymbol('[[');
-  $interpolateProvider.endSymbol(']]');
+    $interpolateProvider.startSymbol('[[');
+    $interpolateProvider.endSymbol(']]');
+
 });
 
 app.config(['$httpProvider', function($httpProvider) {
@@ -10,6 +11,8 @@ app.config(['$httpProvider', function($httpProvider) {
 ]);
 
 app.controller('planetController', function($scope, $http, $location) {
+    $scope.query = $location.search().q;
+  
     $scope.searchV = function(query) {
       var url = "http://paroleonline.it/ws/anagramma?parola=" + query;
       $http.get(url)
@@ -17,5 +20,9 @@ app.controller('planetController', function($scope, $http, $location) {
             $scope.result = response.data.anagrammi;
             ga('send', 'event', 'GrammaticaItaliana', 'anagramma', query);
          });
-     };
+    };
+    
+    //$scope.query = $location.search().q;
+    //searchV($scope.query);
+			 
 });
