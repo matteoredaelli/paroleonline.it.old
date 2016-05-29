@@ -11,8 +11,6 @@ app.config(['$httpProvider', function($httpProvider) {
 ]);
 
 app.controller('planetController', function($scope, $http, $location) {
-    $scope.query = $location.search().q;
-  
     $scope.searchV = function(query) {
       var url = "http://paroleonline.it/ws/anagramma?parola=" + query;
       $http.get(url)
@@ -22,7 +20,7 @@ app.controller('planetController', function($scope, $http, $location) {
          });
     };
     
-    //$scope.query = $location.search().q;
-    //searchV($scope.query);
+    $scope.query = $location.search().q;
+    searchV($scope.query);
 			 
 });
