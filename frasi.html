@@ -10,14 +10,39 @@ og_type: website
 
 <script src="/js/frasi.js"></script>
 
-	  <div ng-app="myApp" ng-controller="planetController">
-            <p><input ng-model="query" placeholder="inserisci una parola" type="text"></p>
-	    <p><button ng-click="searchV(query)">Cerca frasi</button></p>
-	    <p>Frasi di esempio trovate:</p>  
-                <ul>
-                  <li ng-repeat="doc in frasi">
-                        [[doc._source.text | limitTo: 500]]
-                  </li>
-                </ul>
-	  </div>
-
+<div ng-app="myApp" ng-controller="planetController">
+  <p><input ng-model="query" placeholder="inserisci una parola" type="text"></p>
+  <p><button ng-click="redirect(query)">Cerca parola</button></p>
+</div>
+<p>Indici frasi per parola:</p>
+<ul>
+<li><a href="http://paroleonline.it/frasi/a.html">a</a>
+<li><a href="http://paroleonline.it/frasi/b.html">b</a>
+<li><a href="http://paroleonline.it/frasi/c.html">c</a>
+<li><a href="http://paroleonline.it/frasi/d.html">d</a>
+<li><a href="http://paroleonline.it/frasi/e.html">e</a>
+<li><a href="http://paroleonline.it/frasi/f.html">f</a>
+<li><a href="http://paroleonline.it/frasi/g.html">g</a>
+<li><a href="http://paroleonline.it/frasi/h.html">h</a>
+<li><a href="http://paroleonline.it/frasi/i.html">i</a>
+<li><a href="http://paroleonline.it/frasi/I.html">I</a>
+<li><a href="http://paroleonline.it/frasi/j.html">j</a>
+<li><a href="http://paroleonline.it/frasi/J.html">J</a>
+<li><a href="http://paroleonline.it/frasi/k.html">k</a>
+<li><a href="http://paroleonline.it/frasi/K.html">K</a>
+<li><a href="http://paroleonline.it/frasi/l.html">l</a>
+<li><a href="http://paroleonline.it/frasi/m.html">m</a>
+<li><a href="http://paroleonline.it/frasi/n.html">n</a>
+<li><a href="http://paroleonline.it/frasi/o.html">o</a>
+<li><a href="http://paroleonline.it/frasi/p.html">p</a>
+<li><a href="http://paroleonline.it/frasi/q.html">q</a>
+<li><a href="http://paroleonline.it/frasi/r.html">r</a>
+<li><a href="http://paroleonline.it/frasi/s.html">s</a>
+<li><a href="http://paroleonline.it/frasi/t.html">t</a>
+<li><a href="http://paroleonline.it/frasi/u.html">u</a>
+<li><a href="http://paroleonline.it/frasi/v.html">v</a>
+<li><a href="http://paroleonline.it/frasi/w.html">w</a>
+<li><a href="http://paroleonline.it/frasi/x.html">x</a>
+<li><a href="http://paroleonline.it/frasi/y.html">y</a>
+<li><a href="http://paroleonline.it/frasi/z.html">z</a>
+<ul>
